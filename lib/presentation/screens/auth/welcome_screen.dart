@@ -1,7 +1,9 @@
+import 'package:cleancul/presentation/screens/auth/onboarding_screen.dart';
 import 'package:cleancul/presentation/widgets/button.dart';
 import 'package:cleancul/presentation/widgets/texts.dart';
 import 'package:cleancul/presentation/widgets/y_margin.dart';
 import 'package:cleancul/utils/assets.dart';
+import 'package:cleancul/utils/navigator.dart';
 import 'package:cleancul/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -40,7 +42,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 YMargin(50),
                 XButton(
                   onClick: (){
-
+                    navigateReplace(context, OnBoardingScreen());
                   },
                   text: 'Get Started'
                 )

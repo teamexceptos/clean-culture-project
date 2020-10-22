@@ -1,9 +1,11 @@
+import 'package:cleancul/presentation/screens/auth/signin_screen.dart';
 import 'package:cleancul/presentation/widgets/button.dart';
 import 'package:cleancul/presentation/widgets/page_indicator.dart';
 import 'package:cleancul/presentation/widgets/texts.dart';
 import 'package:cleancul/presentation/widgets/x_margin.dart';
 import 'package:cleancul/presentation/widgets/y_margin.dart';
 import 'package:cleancul/utils/assets.dart';
+import 'package:cleancul/utils/navigator.dart';
 import 'package:cleancul/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -54,7 +56,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ),
                   GestureDetector(
                     onTap: (){
-
+                      navigateReplace(context, SigninScreen());
                     },
                     child: Padding(
                       padding: const EdgeInsets.only(right: 15),
@@ -107,11 +109,12 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                     YMargin(10),
                     NormalText(text: pageDescriptions[pagePosition], maxLines: 5,),
                     YMargin(30),
-                    XButton(onClick: (){
+                    XButton(
+                      onClick: (){
                         if(pagePosition != 2){
                           pageController.animateToPage(pagePosition + 1, duration: Duration(microseconds: 10), curve: ElasticInCurve(0.8));
                         }else{
-
+                            navigateReplace(context, SigninScreen());
                         }
                       },
                       text: pagePosition == 2 ? "Finish" : "Next"
