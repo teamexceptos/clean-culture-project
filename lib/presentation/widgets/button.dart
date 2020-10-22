@@ -38,21 +38,21 @@ class XButton extends StatelessWidget {
         onClick();
       },
       child: Container(
-        height: height != null ? config.sh(height) : config.sh(40),
-        width: width != null ? config.sw(width) : config.sw(100),
+        height: height != null ? config.sh(height) : config.sh(60),
+        width: width != null ? config.sw(width) : config.sw(250),
         decoration: BoxDecoration(
           color: buttonColor ?? Theme.of(context).accentColor,
-          borderRadius: radius != null ? BorderRadius.circular(radius) : BorderRadius.circular(5.0)
+          borderRadius: radius != null ? BorderRadius.circular(radius) : BorderRadius.circular(25.0)
         ),
         child: Center(
           child:
           isLoading == null ?
-          NormalText(
+          TitleText(
             text: text,
             textColor: textColor ?? Colors.white,
             fontSize: textSize == null ? config.sp(15): config.sp(textSize),
           ): !isLoading ?
-          NormalText(
+          TitleText(
             text: text,
             textColor: textColor ?? Colors.white,
             fontSize: textSize == null ? config.sp(15): config.sp(textSize),
@@ -64,7 +64,7 @@ class XButton extends StatelessWidget {
             height: config.sh(20),
             width: config.sh(20),
           ) :
-          NormalText(
+          TitleText(
             text: text,
             textColor: textColor ?? Colors.white,
             fontSize: textSize == null ? config.sp(15): config.sp(textSize),

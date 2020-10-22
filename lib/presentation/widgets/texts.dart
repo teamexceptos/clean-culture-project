@@ -6,12 +6,16 @@ class TitleText extends StatelessWidget {
   final double fontSize;
   final Color textColor;
   final TextAlign textAlign;
+  final int maxLines;
 
-  TitleText({@required this.text, this.fontSize, this.textColor, this.textAlign});
+  TitleText({@required this.text, this.fontSize, this.textColor, this.textAlign, this.maxLines});
 
   @override
   Widget build(BuildContext context) {
-    return Text(text,
+    return Text(
+      text,
+      maxLines: maxLines,
+      overflow: TextOverflow.ellipsis,
       textAlign: textAlign != null ? textAlign: TextAlign.start,
       style: Theme.of(context).textTheme.headline1
           .copyWith(
