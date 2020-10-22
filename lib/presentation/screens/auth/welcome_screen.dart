@@ -38,6 +38,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   text: "Your spaces deserve just the very best.\nGet that desired look from anywhere in the world with just a single click",
                   textColor: Colors.white,
                   maxLines: 4,
+                  textAlign: TextAlign.center
                 ),
                 YMargin(50),
                 XButton(

@@ -3,6 +3,7 @@ import 'package:cleancul/presentation/widgets/texts.dart';
 import 'package:cleancul/presentation/widgets/y_margin.dart';
 import 'package:cleancul/utils/assets.dart';
 import 'package:cleancul/utils/size_config.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class PermissionScreen extends StatefulWidget {
@@ -13,6 +14,9 @@ class PermissionScreen extends StatefulWidget {
 class _PermissionScreenState extends State<PermissionScreen> {
   @override
   Widget build(BuildContext context) {
+
+    final ThemeData themeData = Theme.of(context);
+
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
@@ -27,13 +31,19 @@ class _PermissionScreenState extends State<PermissionScreen> {
               children: [
                 MkImageAssets.permissionImage,
                 YMargin(10),
-                TitleText(text: 'All Clean Culture to access your location, calendar and storage?', maxLines: 3,),
+                TitleText(
+                  text: 'Allow Clean Culture to access your location, calendar and storage?',
+                  maxLines: 3,
+                  textAlign: TextAlign.center,
+                  fontSize: 15,
+                  textColor: themeData.primaryColor,
+                ),
                 YMargin(30),
                 XButton(
                   onClick: (){
 
                   },
-                  text: 'Yes'
+                  text: 'Allow All Access'
                 ),
                 YMargin(30)
               ],

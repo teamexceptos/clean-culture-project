@@ -21,11 +21,11 @@ class _PageIndicatorState extends State<PageIndicator> {
       pageIndexNotifier: widget.pageIndexNotifier,
       length: widget.length,
       normalBuilder: (animationController, index) => Container(
-        width: 10.0,
-        height: 10.0,
+        width: 5.0,
+        height: 5.0,
         decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(5.0)
+            borderRadius: BorderRadius.circular(2.5)
         ),
       ),
       highlightedBuilder: (animationController, index) => ScaleTransition(
@@ -34,11 +34,11 @@ class _PageIndicatorState extends State<PageIndicator> {
           curve: Curves.ease,
         ),
         child: Container(
-          width: SizeConfig().sw(20),
-          height: SizeConfig().sh(10),
+          width: SizeConfig().sw(15.0),
+          height: SizeConfig().sh(5.0),
           decoration: BoxDecoration(
             color: Colors.white,
-            borderRadius: BorderRadius.circular(5.0)
+            borderRadius: BorderRadius.circular(2.5)
           ),
         ),
       ),

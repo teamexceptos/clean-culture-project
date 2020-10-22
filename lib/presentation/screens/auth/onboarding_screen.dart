@@ -7,6 +7,7 @@ import 'package:cleancul/presentation/widgets/y_margin.dart';
 import 'package:cleancul/utils/assets.dart';
 import 'package:cleancul/utils/navigator.dart';
 import 'package:cleancul/utils/size_config.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class OnBoardingScreen extends StatefulWidget {
@@ -16,11 +17,11 @@ class OnBoardingScreen extends StatefulWidget {
 
 class _OnBoardingScreenState extends State<OnBoardingScreen> {
 
-  List<String> pageDescriptions = [
+  List<String> pageTitles = [
     'Personalized Cleaning Schedule', 'Location services', 'Best Management Practices'
   ];
 
-  List<String> pageTitles = [
+  List<String> pageDescriptions = [
     'Personalize your cleaning calender by creating cleaning routines suitable with your schedule',
     'Get cleaning services, resources and agents near by',
     'Don’t miss out on the best recycling methods available to your region'
@@ -38,30 +39,27 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
-        padding: EdgeInsets.only(top: 10),
+        padding: EdgeInsets.only(top: 30),
         height: SizeConfig.screenHeightDp,
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.only(right: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Row(
                     children: [
+                      TitleText(text: 'Clean Culture', fontSize: 15, textColor: themeData.primaryColor,),
                       MkImageAssets.greenCleanCulIcon,
                       XMargin(20),
-                      TitleText(text: 'Clean Culture', fontSize: 12, textColor: themeData.primaryColor,)
                     ],
                   ),
                   GestureDetector(
                     onTap: (){
                       navigateReplace(context, SigninScreen());
                     },
-                    child: Padding(
-                      padding: const EdgeInsets.only(right: 15),
-                      child: NormalText(text: 'Skip'),
-                    ),
+                    child: NormalText(text: 'Skip', textColor: Colors.grey),
                   )
 
                 ],
@@ -71,7 +69,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: Container(
-                height: SizeConfig().sh(300),
+                height: SizeConfig().sh(250),
                 width: SizeConfig.screenWidthDp,
                 child: PageView(
                   controller: pageController,
@@ -80,6 +78,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   onPageChanged: (position){
                     pageIndexNotifier.value = position;
                     setState(() {
+                      print('Page position: $position');
                       pagePosition=position;
                     });
 
@@ -96,7 +95,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
             YMargin(10),
             Expanded(
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 30),
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 width: SizeConfig.screenWidthDp,
                 decoration: BoxDecoration(
                   color: themeData.primaryColor,
@@ -105,9 +104,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 child: Column(
                   children: [
                     YMargin(40),
-                    TitleText(text: pageTitles[pagePosition]),
-                    YMargin(10),
-                    NormalText(text: pageDescriptions[pagePosition], maxLines: 5,),
+                    TitleText(text: pageTitles[pagePosition], textColor: Colors.white, fontSize: 15,),
+                    YMargin(3),
+                    NormalText(text: pageDescriptions[pagePosition], maxLines: 5, textColor: Colors.white, textAlign: TextAlign.center,),
                     YMargin(30),
                     XButton(
                       onClick: (){
@@ -120,7 +119,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       text: pagePosition == 2 ? "Finish" : "Next"
                     ),
                     YMargin(20),
-                    pagePosition == 2 ? Container(): PageIndicator(3, pageIndexNotifier),
+                    PageIndicator(3, pageIndexNotifier),
                     YMargin(20),
                   ],
                 ),

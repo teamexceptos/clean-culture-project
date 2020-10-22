@@ -1,3 +1,4 @@
+import 'package:cleancul/presentation/screens/auth/permission_screen.dart';
 import 'package:cleancul/presentation/screens/auth/signup_screen.dart';
 import 'package:cleancul/presentation/widgets/button.dart';
 import 'package:cleancul/presentation/widgets/text_field.dart';
@@ -35,12 +36,12 @@ class _SigninScreenState extends State<SigninScreen> {
           child: Column(
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-
+                  TitleText(text: 'Clean Culture', fontSize: 15, textColor: themeData.primaryColor,),
                   MkImageAssets.greenCleanCulIcon,
                   XMargin(10),
-                  TitleText(text: 'Clean Culture', fontSize: 15, textColor: themeData.primaryColor,)
                 ],
               ),
               YMargin(20),
@@ -50,6 +51,7 @@ class _SigninScreenState extends State<SigninScreen> {
               Form(
                   key: _formKey,
                   child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       XTextField(
                           keyboardType: TextInputType.emailAddress,
@@ -70,34 +72,39 @@ class _SigninScreenState extends State<SigninScreen> {
                       ),
                       YMargin(25),
                       TitleText(text: 'Forgot Password?', fontSize: 12, textColor: themeData.primaryColor,),
-                      YMargin(20),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          NormalText(text: 'Or Sign In with: ',),
-                          Row(
-                            children: [
-                              MkImageAssets.googleIcon,
-                              XMargin(10),
-                              MkImageAssets.facebookIcon,
-                              XMargin(10)
-                            ],
-                          )
-                        ],
+                      YMargin(30),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            NormalText(text: 'Or Sign In with: ',),
+                            Row(
+                              children: [
+                                MkImageAssets.googleIcon,
+                                XMargin(10),
+                                MkImageAssets.facebookIcon,
+                                XMargin(10)
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                       YMargin(30),
                       XButton(
-                          onClick: (){
+                        onClick: (){
+                          navigateReplace(context, PermissionScreen());
 
-                          },
-                          text: 'Log In'
+                        },
+                        text: 'Log In'
                       ),
-                      YMargin(10),
+                      YMargin(40),
                       GestureDetector(
                         onTap: (){
                           navigateReplace(context, SignupScreen());
                         },
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             NormalText(text: "Don't have an account? ",),
                             TitleText(text: 'Sign Up', textColor: themeData.primaryColor, fontSize: 15,),
