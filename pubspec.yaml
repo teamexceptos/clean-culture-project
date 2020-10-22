@@ -1,0 +1,46 @@
+name: cleancul
+description: A new Flutter application.
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.0
+  google_maps_flutter: ^0.5.26
+  permission_handler: ^3.1.0
+  provider: ^4.3.0
+  geolocation: ^1.1.2
+  geolocator: ^5.3.0
+  http: ^0.12.2
+  connectivity: ^0.4.9
+  url_launcher: ^5.5.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+
+  uses-material-design: true
+
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins_regular.ttf
+    - family: Poppins_Bold
+      fonts:
+        - asset: assets/fonts/poppins_bold.ttf
+    - family: Poppins_Extrabold
+      fonts:
+        - asset: assets/fonts/poppins_extrabold.ttf
+    - family: Poppins_Medium
+      fonts:
+        - asset: assets/fonts/poppins_medium.ttf
+  
