@@ -1,4 +1,4 @@
-import 'package:cleancul/presentation/screens/auth/permission_screen.dart';
+import 'package:cleancul/presentation/screens/onboarding/permission_screen.dart';
 import 'package:cleancul/presentation/screens/auth/signin_screen.dart';
 import 'package:cleancul/presentation/widgets/button.dart';
 import 'package:cleancul/presentation/widgets/text_field.dart';

@@ -1,4 +1,4 @@
-import 'package:cleancul/presentation/screens/auth/onboarding_screen.dart';
+import 'package:cleancul/presentation/screens/onboarding/onboarding_screen.dart';
 import 'package:cleancul/presentation/widgets/button.dart';
 import 'package:cleancul/presentation/widgets/texts.dart';
 import 'package:cleancul/presentation/widgets/y_margin.dart';

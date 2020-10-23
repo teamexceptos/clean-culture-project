@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:cleancul/presentation/screens/auth/welcome_screen.dart';
+import 'package:cleancul/presentation/screens/onboarding/welcome_screen.dart';
 import 'package:cleancul/utils/assets.dart';
 import 'package:cleancul/utils/navigator.dart';
 import 'package:cleancul/utils/size_config.dart';

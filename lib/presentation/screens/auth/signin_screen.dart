@@ -1,4 +1,4 @@
-import 'package:cleancul/presentation/screens/auth/permission_screen.dart';
+import 'package:cleancul/presentation/screens/onboarding/permission_screen.dart';
 import 'package:cleancul/presentation/screens/auth/signup_screen.dart';
 import 'package:cleancul/presentation/widgets/button.dart';
 import 'package:cleancul/presentation/widgets/text_field.dart';
@@ -30,91 +30,107 @@ class _SigninScreenState extends State<SigninScreen> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
-          padding: EdgeInsets.only(top: 40, left: 15, right: 15),
           width: SizeConfig.screenWidthDp,
           height: SizeConfig.screenHeightDp,
           child: Column(
             children: [
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  TitleText(text: 'Clean Culture', fontSize: 15, textColor: themeData.primaryColor,),
-                  MkImageAssets.greenCleanCulIcon,
-                  XMargin(10),
+                  MkImageAssets.top_right,
                 ],
               ),
-              YMargin(20),
-              TitleText(text: 'Sign up to joing thousands of users worldwide!', fontSize: 12,),
-              NormalText(text: 'We are all about convenience'),
-              YMargin(40),
-              Form(
-                  key: _formKey,
-                  child: Column(
+              Padding(
+                padding: const EdgeInsets.only(left: 15, right: 15),
+                child: Column(children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      XTextField(
-                          keyboardType: TextInputType.emailAddress,
-                          controller: _emailController,
-                          hintText: 'Email Address',
-                          validator: (String value){
-                            return null;
-                          }
-                      ),
-                      YMargin(15),
-                      XTextField(
-                          obscureText: true,
-                          controller: _passwordController,
-                          hintText: 'Password',
-                          validator: (String value){
-                            return null;
-                          }
-                      ),
-                      YMargin(25),
-                      TitleText(text: 'Forgot Password?', fontSize: 12, textColor: themeData.primaryColor,),
-                      YMargin(30),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            NormalText(text: 'Or Sign In with: ',),
-                            Row(
-                              children: [
-                                MkImageAssets.googleIcon,
-                                XMargin(10),
-                                MkImageAssets.facebookIcon,
-                                XMargin(10)
-                              ],
-                            )
-                          ],
-                        ),
-                      ),
-                      YMargin(30),
-                      XButton(
-                        onClick: (){
-                          navigateReplace(context, PermissionScreen());
-
-                        },
-                        text: 'Log In'
-                      ),
-                      YMargin(40),
-                      GestureDetector(
-                        onTap: (){
-                          navigateReplace(context, SignupScreen());
-                        },
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            NormalText(text: "Don't have an account? ",),
-                            TitleText(text: 'Sign Up', textColor: themeData.primaryColor, fontSize: 15,),
-                          ],
-                        ),
-                      ),
-                      YMargin(40),
+                      TitleText(text: 'Clean Culture', fontSize: 15, textColor: themeData.primaryColor,),
+                      MkImageAssets.greenCleanCulIcon,
+                      XMargin(10),
                     ],
-                  )
-              )
+                  ),
+                  YMargin(20),
+                  TitleText(text: 'Sign up to joing thousands of users worldwide!', fontSize: 12,),
+                  NormalText(text: 'We are all about convenience'),
+                  YMargin(30),
+                  Form(
+                      key: _formKey,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          XTextField(
+                              keyboardType: TextInputType.emailAddress,
+                              controller: _emailController,
+                              hintText: 'Email Address',
+                              validator: (String value){
+                                return null;
+                              }
+                          ),
+                          YMargin(15),
+                          XTextField(
+                              obscureText: true,
+                              controller: _passwordController,
+                              hintText: 'Password',
+                              validator: (String value){
+                                return null;
+                              }
+                          ),
+                          YMargin(25),
+                          TitleText(text: 'Forgot Password?', fontSize: 12, textColor: themeData.primaryColor,),
+                          YMargin(30),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                NormalText(text: 'Or Sign In with: ',),
+                                Row(
+                                  children: [
+                                    MkImageAssets.googleIcon,
+                                    XMargin(10),
+                                    MkImageAssets.facebookIcon,
+                                    XMargin(10)
+                                  ],
+                                )
+                              ],
+                            ),
+                          ),
+                          YMargin(30),
+                          XButton(
+                              onClick: (){
+                                navigateReplace(context, PermissionScreen());
+
+                              },
+                              text: 'Log In'
+                          ),
+                          YMargin(40),
+                          GestureDetector(
+                            onTap: (){
+                              navigateReplace(context, SignupScreen());
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                NormalText(text: "Don't have an account? ",),
+                                TitleText(text: 'Sign Up', textColor: themeData.primaryColor, fontSize: 15,),
+                              ],
+                            ),
+                          ),
+                          YMargin(40),
+                        ],
+                      )
+                  ),
+                ],),
+              ),
+              Expanded(child: Container()),
+              Row(
+                children: [
+                  MkImageAssets.bottom_left,
+                ],
+              ),
             ],
           ),
         ),

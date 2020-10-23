@@ -1,4 +1,4 @@
-import 'package:cleancul/presentation/screens/auth/splash_screen.dart';
+import 'package:cleancul/presentation/screens/onboarding/splash_screen.dart';
 import 'package:cleancul/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Clean Culture',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primaryColor: Color.fromRGBO(121, 164, 92, 1),
         accentColor: Color.fromRGBO(252, 102, 129, 1),

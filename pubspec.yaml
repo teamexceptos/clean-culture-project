@@ -46,3 +46,6 @@ flutter:
       fonts:
         - asset: assets/fonts/poppins_medium.ttf
   
+
+  assets:
+    - assets/images/

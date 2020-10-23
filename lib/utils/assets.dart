@@ -9,19 +9,19 @@ mixin MkImageAssets {
   );
 
   static SvgPicture greenCleanCulIcon = SvgPicture.asset(
-    'assets/images/green_cleancul.svg', height: 50, width: 50, fit: BoxFit.fill,
+    'assets/images/green_cleancul.svg', height: 20, width: 20, fit: BoxFit.contain,
   );
 
   static SvgPicture onBoardingCalendar = SvgPicture.asset(
-    'assets/images/onboarding_calendar.svg', height: 200, width: 200, fit: BoxFit.fill,
+    'assets/images/onboarding_calendar.svg', height: 150, width: 150, fit: BoxFit.contain,
   );
 
   static SvgPicture onBoardingLocation = SvgPicture.asset(
-    'assets/images/onboarding_location.svg', height: 200, width: 200, fit: BoxFit.fill,
+    'assets/images/onboarding_location.svg', height: 150, width: 150, fit: BoxFit.contain,
   );
 
   static SvgPicture onBoardingRecycling = SvgPicture.asset(
-    'assets/images/onboarding_recycling_best_practices.svg', height: 200, width: 200, fit: BoxFit.fill,
+    'assets/images/onboarding_recycling_best_practices.svg', height: 150, width: 150, fit: BoxFit.contain,
   );
 
   static SvgPicture googleIcon = SvgPicture.asset(
@@ -34,5 +34,13 @@ mixin MkImageAssets {
 
   static SvgPicture permissionImage = SvgPicture.asset(
     'assets/images/permissions.svg', height: 200, width: 200, fit: BoxFit.fill,
+  );
+
+  static SvgPicture bottom_left = SvgPicture.asset(
+    'assets/images/left_bottom_art.svg', height: 100, width: 100, fit: BoxFit.fill,
+  );
+
+  static SvgPicture top_right = SvgPicture.asset(
+    'assets/images/top_right_art.svg', height: 100, width: 100, fit: BoxFit.contain,
   );
 }
