@@ -43,4 +43,17 @@ mixin MkImageAssets {
   static SvgPicture top_right = SvgPicture.asset(
     'assets/images/top_right_art.svg', height: 100, width: 100, fit: BoxFit.contain,
   );
+
+  static SvgPicture bottomBarCalendar = SvgPicture.asset(
+    'assets/images/bottom_bar_calendar.svg', height:20, width: 20, fit: BoxFit.contain,
+  );
+  static SvgPicture bottomBarHome = SvgPicture.asset(
+    'assets/images/bottom_bar_home.svg', height: 20, width: 20, fit: BoxFit.contain,
+  );
+  static SvgPicture bottomBarLocation = SvgPicture.asset(
+    'assets/images/bottom_bar_location.svg', height: 20, width: 20, fit: BoxFit.contain,
+  );
+  static SvgPicture bottomBarProfile = SvgPicture.asset(
+    'assets/images/bottom_bar_profile.svg', height: 20, width: 20, fit: BoxFit.contain,
+  );
 }
