@@ -2,6 +2,7 @@ import 'package:cleancul/presentation/screens/others/available_service_agents_sc
 import 'package:cleancul/presentation/views/home_schedule_view.dart';
 import 'package:cleancul/presentation/views/popular_articles_view.dart';
 import 'package:cleancul/presentation/widgets/texts.dart';
+import 'package:cleancul/presentation/widgets/x_margin.dart';
 import 'package:cleancul/presentation/widgets/y_margin.dart';
 import 'package:cleancul/utils/navigator.dart';
 import 'package:cleancul/utils/size_config.dart';
@@ -16,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final SizeConfig _config = SizeConfig();
 
-  final colorList = <Color>[Colors.blue, Colors.green, Colors.red, Colors.white, Colors.amber, Colors.indigo];
+  final colorList = <Color>[Colors.blue, Colors.green, Colors.red, Colors.black54, Colors.amber, Colors.indigo];
 
   @override
   Widget build(BuildContext context) {
@@ -45,27 +46,27 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
                     Container(
-                      height: _config.sh(70),
-                      width: _config.sh(70),
+                      height: _config.sh(40),
+                      width: _config.sw(40),
                       decoration: BoxDecoration(
                         color: theme.primaryColor,
-                        borderRadius: BorderRadius.circular(35),
-                        boxShadow: <BoxShadow>[
-                          BoxShadow(color: theme.primaryColor.withOpacity(0.5), spreadRadius: 20,)
-                        ]
+                        borderRadius: BorderRadius.circular(20),
                       ),
                       child: Center(
-                        child: Icon(Icons.person_pin, color: Colors.white, size: 15,),
+                        child: Icon(Icons.person_pin, color: Colors.white, size: 25,),
                       ),
                     )
                   ],
                 ),
               ),
+              YMargin(20),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 15),
+                child: TitleText(text: 'Cleaning Schedule'),
+              ),
               YMargin(15),
-              TitleText(text: 'Cleaning Schedule'),
-              YMargin(10),
               Container(
-                height: _config.sh(150),
+                height: _config.sh(100),
                 child: ListView.builder(
                   shrinkWrap: true,
                   itemCount: 5,
@@ -87,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Column(
                       children: [
@@ -100,7 +101,6 @@ class _HomeScreenState extends State<HomeScreen> {
                         NormalText(text: 'Cleaning Agents', fontSize: 12,)
                       ],
                     ),
-
                     Column(
                       children: [
                         Image.asset(
@@ -115,7 +115,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              YMargin(15),
+              YMargin(20),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Row(
@@ -126,9 +126,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              YMargin(10),
               ListView.builder(
-                padding: EdgeInsets.symmetric(horizontal: 15),
                 shrinkWrap: true,
                 itemCount: 5,
                 physics: new NeverScrollableScrollPhysics(),

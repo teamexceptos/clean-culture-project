@@ -24,7 +24,7 @@ class _PopularArticlesViewState extends State<PopularArticlesView> {
     final SizeConfig _config = SizeConfig();
 
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
       child: Row(
         children: [
           Card(
@@ -35,11 +35,12 @@ class _PopularArticlesViewState extends State<PopularArticlesView> {
             ),
             child: Image.asset(
               'assets/images/cleaning_practices.png',
-              height: _config.sh(100),
-              width: _config.sw(100),
+              height: _config.sh(50),
+              width: _config.sw(50),
+              fit: BoxFit.cover,
             ),
           ),
-          XMargin(10),
+          XMargin(5),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [

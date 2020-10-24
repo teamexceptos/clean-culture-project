@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:cleancul/presentation/screens/home/calendar_screen.dart';
 import 'package:cleancul/presentation/screens/home/home_screen.dart';
 import 'package:cleancul/presentation/screens/home/location_screen.dart';
@@ -57,7 +55,7 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Profile'
           ),
         ],
-        backgroundColor: Colors.white12,
+        backgroundColor: Colors.white,
       ),
     );
   }

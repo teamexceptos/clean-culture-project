@@ -30,8 +30,8 @@ class _SigninScreenState extends State<SigninScreen> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
-          width: SizeConfig.screenWidthDp,
           height: SizeConfig.screenHeightDp,
+          width: SizeConfig.screenWidthDp,
           child: Column(
             children: [
               Row(
@@ -48,8 +48,9 @@ class _SigninScreenState extends State<SigninScreen> {
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       TitleText(text: 'Clean Culture', fontSize: 15, textColor: themeData.primaryColor,),
-                      MkImageAssets.greenCleanCulIcon,
                       XMargin(10),
+                      MkImageAssets.greenCleanCulIcon,
+
                     ],
                   ),
                   YMargin(20),
@@ -119,7 +120,6 @@ class _SigninScreenState extends State<SigninScreen> {
                               ],
                             ),
                           ),
-                          YMargin(40),
                         ],
                       )
                   ),

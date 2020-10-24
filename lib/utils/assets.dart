@@ -13,15 +13,15 @@ mixin MkImageAssets {
   );
 
   static SvgPicture onBoardingCalendar = SvgPicture.asset(
-    'assets/images/onboarding_calendar.svg', height: 150, width: 150, fit: BoxFit.contain,
+    'assets/images/onboarding_calendar.svg', height: 70, width: 70, fit: BoxFit.contain,
   );
 
   static SvgPicture onBoardingLocation = SvgPicture.asset(
-    'assets/images/onboarding_location.svg', height: 150, width: 150, fit: BoxFit.contain,
+    'assets/images/onboarding_location.svg', height: 70, width: 70, fit: BoxFit.contain,
   );
 
   static SvgPicture onBoardingRecycling = SvgPicture.asset(
-    'assets/images/onboarding_recycling_best_practices.svg', height: 150, width: 150, fit: BoxFit.contain,
+    'assets/images/onboarding_recycling_best_practices.svg', height: 70, width: 70, fit: BoxFit.contain,
   );
 
   static SvgPicture googleIcon = SvgPicture.asset(
@@ -29,7 +29,7 @@ mixin MkImageAssets {
   );
 
   static SvgPicture facebookIcon = SvgPicture.asset(
-    'assets/images/facebook_icon.svg', height: 20, width: 200, fit: BoxFit.fill,
+    'assets/images/facebook_icon.svg', height:20, width: 20, fit: BoxFit.fill,
   );
 
   static SvgPicture permissionImage = SvgPicture.asset(

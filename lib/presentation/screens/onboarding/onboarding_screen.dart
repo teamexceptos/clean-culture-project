@@ -44,7 +44,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 15),
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -70,7 +70,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               padding: const EdgeInsets.all(15.0),
               child: Container(
                 height: SizeConfig().sh(250),
-                width: SizeConfig.screenWidthDp,
+                width: SizeConfig.screenWidthDp - 120,
                 child: PageView(
                   controller: pageController,
                   scrollDirection: Axis.horizontal,
