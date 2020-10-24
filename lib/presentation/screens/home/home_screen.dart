@@ -1,7 +1,9 @@
+import 'package:cleancul/presentation/screens/others/available_service_agents_screen.dart';
 import 'package:cleancul/presentation/views/home_schedule_view.dart';
 import 'package:cleancul/presentation/views/popular_articles_view.dart';
 import 'package:cleancul/presentation/widgets/texts.dart';
 import 'package:cleancul/presentation/widgets/y_margin.dart';
+import 'package:cleancul/utils/navigator.dart';
 import 'package:cleancul/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -131,10 +133,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemCount: 5,
                 physics: new NeverScrollableScrollPhysics(),
                 itemBuilder: (BuildContext context, int position){
-                  return PopularArticlesView(
-                    articleTitle: 'Cleanliness is next to Godliness',
-                    articleDuration: '30s ago',
-                    articleNoOfComments: '50 comments'
+                  return GestureDetector(
+                    onTap: (){
+                      navigate(context, AvailableServiceAgentsScreen());
+                    },
+                    child: PopularArticlesView(
+                      articleTitle: 'Cleanliness is next to Godliness',
+                      articleDuration: '30s ago',
+                      articleNoOfComments: '50 comments'
+                    ),
                   );
                 }
               ),

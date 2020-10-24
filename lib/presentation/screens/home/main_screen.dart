@@ -57,7 +57,7 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Profile'
           ),
         ],
-        backgroundColor: Colors.white70,
+        backgroundColor: Colors.white12,
       ),
     );
   }

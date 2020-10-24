@@ -1,3 +1,4 @@
+import 'package:cleancul/presentation/screens/others/service_agent_detail_screen.dart';
 import 'package:cleancul/presentation/views/service_agents_item.dart';
 import 'package:cleancul/presentation/widgets/texts.dart';
 import 'package:cleancul/presentation/widgets/y_margin.dart';
@@ -38,7 +39,12 @@ class _AvailableServiceAgentsScreenState extends State<AvailableServiceAgentsScr
                 itemCount: 5,
                 physics: new NeverScrollableScrollPhysics(),
                 itemBuilder: (BuildContext context, int position){
-                  return ServiceAgentItem();
+                  return GestureDetector(
+                    onTap: (){
+                      navigate(context, ServiceAgentDetailsScreen());
+                    },
+                    child: ServiceAgentItem()
+                  );
                 }
               )
             ],

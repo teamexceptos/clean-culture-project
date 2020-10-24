@@ -5,12 +5,12 @@ import 'package:cleancul/utils/navigator.dart';
 import 'package:cleancul/utils/size_config.dart';
 import 'package:flutter/material.dart';
 
-class ServiceAgentDetails extends StatefulWidget {
+class ServiceAgentDetailsScreen extends StatefulWidget {
   @override
-  _ServiceAgentDetailsState createState() => _ServiceAgentDetailsState();
+  _ServiceAgentDetailsScreenState createState() => _ServiceAgentDetailsScreenState();
 }
 
-class _ServiceAgentDetailsState extends State<ServiceAgentDetails> {
+class _ServiceAgentDetailsScreenState extends State<ServiceAgentDetailsScreen> {
 
   final SizeConfig _config = SizeConfig();
 
