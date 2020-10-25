@@ -3,6 +3,7 @@ import 'package:cleancul/presentation/widgets/x_margin.dart';
 import 'package:cleancul/presentation/widgets/y_margin.dart';
 import 'package:cleancul/utils/decorator.dart';
 import 'package:cleancul/utils/size_config.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -27,17 +28,22 @@ class CleaningScheduleListView extends StatelessWidget {
     return InkWell(
       onTap: onScheduleClick,
       child: Container(
-          width: SizeConfig.screenWidthDp,
-          decoration: boxDecorators.fillDecorationShadow(color),
+          width: config.sw(200),
+          height: config.sh(100),
+          margin: const EdgeInsets.only(right: 15),
+          decoration: BoxDecoration(
+            color: color,
+            borderRadius: BorderRadius.circular(10)
+          ),
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(10.0),
             child: Column(
 
               children: [
                 Row(children: [
                   Icon(Icons.today, color: Colors.orange,),
                   XMargin(10),
-                  NormalText(text: day),
+                  NormalText(text: day, textColor: Colors.white,),
                 ],),
 
                 YMargin(10),
@@ -45,7 +51,7 @@ class CleaningScheduleListView extends StatelessWidget {
                 Row(children: [
                   Icon(Icons.access_time_rounded, color: Colors.orange,),
                   XMargin(10),
-                  NormalText(text: time),
+                  NormalText(text: time, textColor: Colors.white,),
                 ],),
               ]
             ),
