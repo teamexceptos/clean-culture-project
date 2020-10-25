@@ -1,8 +1,10 @@
+import 'package:cleancul/presentation/screens/others/create_cleaning_activity.dart';
 import 'package:cleancul/presentation/views/calendar_schedule_view.dart';
 import 'package:cleancul/presentation/widgets/texts.dart';
 import 'package:cleancul/presentation/widgets/x_margin.dart';
 import 'package:cleancul/presentation/widgets/y_margin.dart';
 import 'package:cleancul/utils/assets.dart';
+import 'package:cleancul/utils/navigator.dart';
 import 'package:cleancul/utils/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_calendar_carousel/flutter_calendar_carousel.dart' show CalendarCarousel;
@@ -192,7 +194,7 @@ class _CalendarScreenState extends State<CalendarScreen> {
     return new Scaffold(
       floatingActionButton: new FloatingActionButton(
         onPressed: () {
-
+          navigate(context, CreateCleaningActivity());
         },
         child: Icon(
           Icons.add,

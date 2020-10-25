@@ -25,11 +25,11 @@ mixin MkImageAssets {
   );
 
   static SvgPicture googleIcon = SvgPicture.asset(
-    'assets/images/google_icon.svg', height: 20, width: 20, fit: BoxFit.fill,
+    'assets/images/google_icon.svg', height: 40, width: 40, fit: BoxFit.fill,
   );
 
   static SvgPicture facebookIcon = SvgPicture.asset(
-    'assets/images/facebook_icon.svg', height:20, width: 20, fit: BoxFit.fill,
+    'assets/images/facebook_icon.svg', height:40, width: 40, fit: BoxFit.fill,
   );
 
   static SvgPicture doneIcon = SvgPicture.asset(
@@ -58,6 +58,18 @@ mixin MkImageAssets {
 
   static SvgPicture pendingIcon = SvgPicture.asset(
     'assets/images/icon_pending.svg', height:20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture set_date_icon = SvgPicture.asset(
+    'assets/images/set_date.svg', height: 20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture set_time_icon = SvgPicture.asset(
+    'assets/images/set_time.svg', height:20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture set_reminder_icon = SvgPicture.asset(
+    'assets/images/set_reminder.svg', height:20, width: 20, fit: BoxFit.fill,
   );
 
   static SvgPicture permissionImage = SvgPicture.asset(
