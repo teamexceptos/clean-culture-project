@@ -32,6 +32,34 @@ mixin MkImageAssets {
     'assets/images/facebook_icon.svg', height:20, width: 20, fit: BoxFit.fill,
   );
 
+  static SvgPicture doneIcon = SvgPicture.asset(
+    'assets/images/icon_done.svg', height: 20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture clean_kitchen_icon = SvgPicture.asset(
+    'assets/images/clean_kitchen.svg', height:20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture clean_office_icon = SvgPicture.asset(
+    'assets/images/clean_office.svg', height: 20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture clean_room_icon = SvgPicture.asset(
+    'assets/images/clean_room.svg', height:20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture clean_rest_room_icon = SvgPicture.asset(
+    'assets/images/clean_rest_room.svg', height: 20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture clean_compound_icon = SvgPicture.asset(
+    'assets/images/clean_compound.svg', height: 20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture pendingIcon = SvgPicture.asset(
+    'assets/images/icon_pending.svg', height:20, width: 20, fit: BoxFit.fill,
+  );
+
   static SvgPicture permissionImage = SvgPicture.asset(
     'assets/images/permissions.svg', height: 200, width: 200, fit: BoxFit.fill,
   );
