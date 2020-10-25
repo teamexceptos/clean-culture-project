@@ -19,6 +19,16 @@ class _HomeScreenState extends State<HomeScreen> {
 
   final colorList = <Color>[Colors.blue, Colors.green, Colors.red, Colors.black54, Colors.amber, Colors.indigo];
 
+  final articleTitle = <String>["Cleaning is the new wellness",
+    "Getting rid of Cholera",
+    "Leveraging on Recycling",
+    "Managing cleaning habits" ];
+  final articlePostedDay = <String>["3 days ago",
+    "10 days ago",
+    "23 days ago",
+    "a month ago"];
+  final articlePostedViews = <String>["230", "132", "432", "400"];
+
   @override
   Widget build(BuildContext context) {
 
@@ -59,14 +69,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              YMargin(20),
+              YMargin(40),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: TitleText(text: 'Cleaning Schedule'),
+                child: TitleText(text: 'Cleaning Schedule', fontSize: 20,),
               ),
               YMargin(15),
               Container(
-                height: _config.sh(100),
+                height: _config.sh(70),
                 child: ListView.builder(
                   shrinkWrap: true,
                   itemCount: 5,
@@ -76,7 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     return CleaningScheduleListView(
                       color: colorList[position],
                       day: 'Tuesday',
-                      onScheduleClick: (){
+                      onScheduleClick: () {
 
                       },
                       time: '5PM - 6PM',
@@ -90,16 +100,20 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
-                      children: [
-                        Image.asset(
-                          'assets/images/cleaning_agents.png',
-                          width: _config.sw(150),
-                          height: _config.sh(150),
-                        ),
-                        YMargin(5),
-                        NormalText(text: 'Cleaning Agents', fontSize: 12,)
-                      ],
+                    InkWell(
+                      onTap: (){
+                        navigate(context, AvailableServiceAgentsScreen());
+                      },
+                      child: Column(
+                        children: [
+                          Image.asset(
+                            'assets/images/cleaning_agents.png',
+                            width: _config.sw(150),
+                            height: _config.sh(150),
+                          ),
+                          NormalText(text: 'Cleaning Agents', fontSize: 12,)
+                        ],
+                      ),
                     ),
                     Column(
                       children: [
@@ -108,14 +122,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           width: _config.sw(150),
                           height: _config.sh(150),
                         ),
-                        YMargin(5),
-                        NormalText(text: 'Cleaning Resources', fontSize: 12,)
+                        NormalText(text: 'Cleaning Store', fontSize: 12,)
                       ],
                     ),
                   ],
                 ),
               ),
-              YMargin(20),
+              YMargin(30),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Row(
@@ -128,17 +141,14 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               ListView.builder(
                 shrinkWrap: true,
-                itemCount: 5,
+                itemCount: articleTitle.length,
                 physics: new NeverScrollableScrollPhysics(),
                 itemBuilder: (BuildContext context, int position){
                   return GestureDetector(
-                    onTap: (){
-                      navigate(context, AvailableServiceAgentsScreen());
-                    },
                     child: PopularArticlesView(
-                      articleTitle: 'Cleanliness is next to Godliness',
-                      articleDuration: '30s ago',
-                      articleNoOfComments: '50 comments'
+                      articleTitle: articleTitle[position],
+                      articleDuration: articlePostedDay[position],
+                      articleNoOfComments: articlePostedViews[position],
                     ),
                   );
                 }

@@ -44,17 +44,21 @@ class _PopularArticlesViewState extends State<PopularArticlesView> {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              TitleText(text: widget.articleTitle, fontSize: 17,),
+              Row(
+                children: [
+                  TitleText(text: widget.articleTitle, fontSize: 12, fontWeight: FontWeight.w400,),
+                ],
+              ),
               YMargin(10),
               Row(
                 children: [
                   Icon(Icons.access_time_rounded, color: Colors.grey, size: 12,),
                   XMargin(5),
-                  NormalText(text: widget.articleDuration, fontSize: 12, textColor: Colors.grey,),
+                  NormalText(text: widget.articleDuration, fontSize: 11, textColor: Colors.grey,),
                   XMargin(20),
-                  Icon(Icons.question_answer, color: Colors.grey, size: 12,),
+                  Icon(Icons.remove_red_eye, color: Colors.grey, size: 12,),
                   XMargin(5),
-                  NormalText(text: widget.articleNoOfComments, fontSize: 12, textColor: Colors.grey,),
+                  NormalText(text: widget.articleNoOfComments, fontSize: 11, textColor: Colors.grey,),
                 ],
               ),
             ],

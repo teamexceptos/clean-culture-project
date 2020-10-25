@@ -6,9 +6,10 @@ class TitleText extends StatelessWidget {
   final double fontSize;
   final Color textColor;
   final TextAlign textAlign;
+  final FontWeight fontWeight;
   final int maxLines;
 
-  TitleText({@required this.text, this.fontSize, this.textColor, this.textAlign, this.maxLines});
+  TitleText({@required this.text, this.fontSize, this.fontWeight, this.textColor, this.textAlign, this.maxLines});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +21,8 @@ class TitleText extends StatelessWidget {
       style: Theme.of(context).textTheme.headline1
           .copyWith(
             fontSize: fontSize != null ? SizeConfig().sp(fontSize): SizeConfig().sp(25),
-            color: textColor != null ? textColor: Colors.black
+            color: textColor != null ? textColor: Colors.black,
+            fontWeight: fontWeight != null ? fontWeight: FontWeight.w700
           ),
     );
   }

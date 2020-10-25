@@ -16,19 +16,22 @@ class _AvailableServiceAgentsScreenState extends State<AvailableServiceAgentsScr
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: IconButton(
+            icon: Icon(Icons.close, color: Colors.black, size: 35,),
+            onPressed: () {
+              popView(context);
+            }
+        ),
+      ),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 40),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              IconButton(
-                icon: Icon(Icons.arrow_back_ios, color: Colors.black,),
-                onPressed: (){
-                  popView(context);
-                }
-              ),
-              YMargin(20),
               SizedBox(
                 width: SizeConfig.screenWidthDp - 70,
                 child: TitleText(text: 'Available Service Agent', maxLines: 2,)

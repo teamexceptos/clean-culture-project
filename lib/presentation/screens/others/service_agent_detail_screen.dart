@@ -22,24 +22,27 @@ class _ServiceAgentDetailsScreenState extends State<ServiceAgentDetailsScreen> {
 
     return Scaffold(
       backgroundColor: Colors.white,
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios_rounded, color: Colors.black, size: 35,),
+            onPressed: () {
+              popView(context);
+            }
+        ),
+      ),
       body: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 40),
+          padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              IconButton(
-                icon: Icon(Icons.arrow_back_ios, color: Colors.black,),
-                onPressed: (){
-                  popView(context);
-                }
-              ),
-              YMargin(20),
               SizedBox(
-                  width: SizeConfig.screenWidthDp - 70,
-                  child: TitleText(text: 'Available Service Agent', maxLines: 2,)
+                  width: SizeConfig.screenWidthDp - 150,
+                  child: TitleText(text: 'Service Agent Details', maxLines: 2,)
               ),
-              YMargin(15),
+              YMargin(25),
               SubtitleText(text: 'Mediclean Agency'),
               SizedBox(
                 width: SizeConfig.screenWidthDp - 70,
@@ -83,24 +86,24 @@ class _ServiceAgentDetailsScreenState extends State<ServiceAgentDetailsScreen> {
                                 Column(
                                   children: [
                                     NormalText(text: 'PER BILL', textColor: Colors.white, fontSize: 12,),
-                                    TitleText(text: 'N3500', textColor: Colors.white, fontSize: 25,)
+                                    TitleText(text: 'N3,500', textColor: Colors.white, fontSize: 25,)
                                   ],
                                 ),
                                 Column(
                                   children: [
                                     NormalText(text: 'RATING', textColor: Colors.white, fontSize: 12,),
-                                    TitleText(text: '4/5', textColor: Colors.white, fontSize: 25,)
+                                    TitleText(text: '4.5/5', textColor: Colors.white, fontSize: 25,)
                                   ],
                                 ),
                                 Column(
                                   children: [
                                     NormalText(text: 'TIME', textColor: Colors.white, fontSize: 12,),
-                                    TitleText(text: '2H', textColor: Colors.white, fontSize: 25,)
+                                    TitleText(text: '2h', textColor: Colors.white, fontSize: 25,)
                                   ],
                                 ),
                               ],
                             ),
-                            YMargin(20),
+                            YMargin(40),
                             NormalText(text: 'REVIEWS', textColor: Colors.white, fontSize: 12,),
                             YMargin(10),
                             Wrap(
@@ -138,7 +141,7 @@ class _ServiceAgentDetailsScreenState extends State<ServiceAgentDetailsScreen> {
                                 ),
                               ],
                             ),
-                            YMargin(20),
+                            YMargin(35),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.end,
                               children: [
@@ -166,7 +169,10 @@ class _ServiceAgentDetailsScreenState extends State<ServiceAgentDetailsScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   XButton(
-                    width: SizeConfig.screenWidthDp - 100,
+                    width: SizeConfig().sw(150),
+                    height: SizeConfig().sh(30),
+                    radius: 36,
+                    buttonColor: Colors.grey,
                     onClick: (){
 
                     },

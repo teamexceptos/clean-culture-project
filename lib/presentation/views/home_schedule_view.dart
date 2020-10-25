@@ -29,7 +29,6 @@ class CleaningScheduleListView extends StatelessWidget {
       onTap: onScheduleClick,
       child: Container(
           width: config.sw(200),
-          height: config.sh(100),
           margin: const EdgeInsets.only(right: 15),
           decoration: BoxDecoration(
             color: color,
@@ -41,7 +40,7 @@ class CleaningScheduleListView extends StatelessWidget {
 
               children: [
                 Row(children: [
-                  Icon(Icons.today, color: Colors.orange,),
+                  Icon(Icons.today, color: Colors.black26,),
                   XMargin(10),
                   NormalText(text: day, textColor: Colors.white,),
                 ],),
@@ -49,7 +48,7 @@ class CleaningScheduleListView extends StatelessWidget {
                 YMargin(10),
 
                 Row(children: [
-                  Icon(Icons.access_time_rounded, color: Colors.orange,),
+                  Icon(Icons.access_time_rounded, color: Colors.black26,),
                   XMargin(10),
                   NormalText(text: time, textColor: Colors.white,),
                 ],),
