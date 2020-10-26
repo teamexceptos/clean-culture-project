@@ -24,6 +24,14 @@ mixin MkImageAssets {
     'assets/images/onboarding_recycling_best_practices.svg', height: 70, width: 70, fit: BoxFit.contain,
   );
 
+  static SvgPicture locationBuildingIcon = SvgPicture.asset(
+    'assets/images/location_building_icon.svg', height:40, width: 40, fit: BoxFit.fill,
+  );
+
+  static SvgPicture smartBinIcon = SvgPicture.asset(
+    'assets/images/smart_bin_icon.svg', height:40, width: 40, fit: BoxFit.fill,
+  );
+
   static SvgPicture googleIcon = SvgPicture.asset(
     'assets/images/google_icon.svg', height: 40, width: 40, fit: BoxFit.fill,
   );
