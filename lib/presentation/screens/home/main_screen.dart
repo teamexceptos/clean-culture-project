@@ -1,7 +1,7 @@
 import 'package:cleancul/presentation/screens/home/calendar_screen.dart';
 import 'package:cleancul/presentation/screens/home/home_screen.dart';
 import 'package:cleancul/presentation/screens/home/location_screen.dart';
-import 'package:cleancul/presentation/screens/home/profile_screen.dart';
+import 'package:cleancul/presentation/screens/home/store_screen.dart';
 import 'package:cleancul/utils/assets.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +14,7 @@ class _MainScreenState extends State<MainScreen> {
 
   int currentPosition = 0;
 
-  var pages = <Widget>[HomeScreen(), CalendarScreen(), LocationScreen(), ProfileScreen()];
+  var pages = <Widget>[HomeScreen(), CalendarScreen(), LocationScreen(), StoreScreen()];
 
   @override
   Widget build(BuildContext context) {
@@ -51,8 +51,8 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Location'
           ),
           BottomNavigationBarItem(
-            icon: MkImageAssets.bottomBarProfile,
-            label: 'Profile'
+            icon: Icon(Icons.store_rounded, size: 22,),
+            label: 'Store'
           ),
         ],
         backgroundColor: Colors.white,
