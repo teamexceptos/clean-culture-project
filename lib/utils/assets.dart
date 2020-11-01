@@ -24,12 +24,60 @@ mixin MkImageAssets {
     'assets/images/onboarding_recycling_best_practices.svg', height: 70, width: 70, fit: BoxFit.contain,
   );
 
+  static SvgPicture locationBuildingIcon = SvgPicture.asset(
+    'assets/images/location_building_icon.svg', height:40, width: 40, fit: BoxFit.fill,
+  );
+
+  static SvgPicture smartBinIcon = SvgPicture.asset(
+    'assets/images/smart_bin_icon.svg', height:40, width: 40, fit: BoxFit.fill,
+  );
+
   static SvgPicture googleIcon = SvgPicture.asset(
-    'assets/images/google_icon.svg', height: 20, width: 20, fit: BoxFit.fill,
+    'assets/images/google_icon.svg', height: 40, width: 40, fit: BoxFit.fill,
   );
 
   static SvgPicture facebookIcon = SvgPicture.asset(
-    'assets/images/facebook_icon.svg', height:20, width: 20, fit: BoxFit.fill,
+    'assets/images/facebook_icon.svg', height:40, width: 40, fit: BoxFit.fill,
+  );
+
+  static SvgPicture doneIcon = SvgPicture.asset(
+    'assets/images/icon_done.svg', height: 20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture clean_kitchen_icon = SvgPicture.asset(
+    'assets/images/clean_kitchen.svg', height:20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture clean_office_icon = SvgPicture.asset(
+    'assets/images/clean_office.svg', height: 20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture clean_room_icon = SvgPicture.asset(
+    'assets/images/clean_room.svg', height:20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture clean_rest_room_icon = SvgPicture.asset(
+    'assets/images/clean_rest_room.svg', height: 20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture clean_compound_icon = SvgPicture.asset(
+    'assets/images/clean_compound.svg', height: 20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture pendingIcon = SvgPicture.asset(
+    'assets/images/icon_pending.svg', height:20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture set_date_icon = SvgPicture.asset(
+    'assets/images/set_date.svg', height: 20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture set_time_icon = SvgPicture.asset(
+    'assets/images/set_time.svg', height:20, width: 20, fit: BoxFit.fill,
+  );
+
+  static SvgPicture set_reminder_icon = SvgPicture.asset(
+    'assets/images/set_reminder.svg', height:20, width: 20, fit: BoxFit.fill,
   );
 
   static SvgPicture permissionImage = SvgPicture.asset(
