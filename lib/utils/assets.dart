@@ -85,7 +85,7 @@ mixin MkImageAssets {
   );
 
   static SvgPicture bottom_left = SvgPicture.asset(
-    'assets/images/left_bottom_art.svg', height: 100, width: 100, fit: BoxFit.fill,
+    'assets/images/left_bottom_art.svg', height: 60, width: 100, fit: BoxFit.fill,
   );
 
   static SvgPicture top_right = SvgPicture.asset(

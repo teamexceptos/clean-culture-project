@@ -31,7 +31,7 @@ class CleaningScheduleListView extends StatelessWidget {
           width: config.sw(200),
           margin: const EdgeInsets.only(right: 15),
           decoration: BoxDecoration(
-            color: color,
+            color: color.withOpacity(0.2),
             borderRadius: BorderRadius.circular(10)
           ),
           child: Padding(
@@ -42,7 +42,7 @@ class CleaningScheduleListView extends StatelessWidget {
                 Row(children: [
                   Icon(Icons.today, color: Colors.black26,),
                   XMargin(10),
-                  NormalText(text: day, textColor: Colors.white,),
+                  NormalText(text: day, textColor: Colors.black54, fontSize: 13,),
                 ],),
 
                 YMargin(10),
@@ -50,7 +50,7 @@ class CleaningScheduleListView extends StatelessWidget {
                 Row(children: [
                   Icon(Icons.access_time_rounded, color: Colors.black26,),
                   XMargin(10),
-                  NormalText(text: time, textColor: Colors.white,),
+                  NormalText(text: time, textColor: Colors.black54, fontSize: 12,),
                 ],),
               ]
             ),

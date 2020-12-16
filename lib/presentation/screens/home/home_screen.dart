@@ -72,7 +72,7 @@ class _HomeScreenState extends State<HomeScreen> {
               YMargin(40),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
-                child: TitleText(text: 'Cleaning Schedule', fontSize: 20,),
+                child: TitleText(text: 'Cleaning Schedule', fontSize: 16,),
               ),
               YMargin(15),
               Container(
@@ -128,14 +128,14 @@ class _HomeScreenState extends State<HomeScreen> {
                   ],
                 ),
               ),
-              YMargin(30),
+              YMargin(45),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 15),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    TitleText(text: 'Popular', fontSize: 20,),
-                    NormalText(text: 'Show All', textColor: theme.accentColor,)
+                    TitleText(text: 'Popular', fontSize: 16,),
+                    NormalText(text: 'Show All', textColor: theme.accentColor, )
                   ],
                 ),
               ),

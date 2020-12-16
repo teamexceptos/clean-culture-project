@@ -1,3 +1,4 @@
+import 'package:cleancul/presentation/screens/home/main_screen.dart';
 import 'package:cleancul/presentation/screens/onboarding/onboarding_screen.dart';
 import 'package:cleancul/presentation/widgets/button.dart';
 import 'package:cleancul/presentation/widgets/texts.dart';
@@ -34,7 +35,7 @@ class _WelcomeScreenState extends State<CreateCleaningActivity> {
         elevation: 0,
         backgroundColor: Colors.white,
         leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios_rounded, color: Colors.black, size: 35,),
+            icon: Icon(Icons.arrow_back_ios_rounded, color: Colors.black, size: 30,),
             onPressed: () {
               popView(context);
             }
@@ -43,7 +44,6 @@ class _WelcomeScreenState extends State<CreateCleaningActivity> {
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Container(
-          height: SizeConfig.screenHeightDp,
           width: SizeConfig.screenWidthDp,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 15),
@@ -95,7 +95,7 @@ class _WelcomeScreenState extends State<CreateCleaningActivity> {
 
                 ],),
 
-                YMargin(25.0),
+                YMargin(45.0),
 
                 NormalText(text: 'Select places', fontSize: 14,),
 
@@ -109,7 +109,7 @@ class _WelcomeScreenState extends State<CreateCleaningActivity> {
                         height: 60,
                         width: 60,
                         child: MkImageAssets.clean_kitchen_icon),
-                    NormalText(text: 'Kitchen', fontSize: 14, textColor: Colors.black45),
+                    NormalText(text: 'Kitchen', fontSize: 11, textColor: Colors.black45),
                   ]),
 
                   XMargin(7),
@@ -119,7 +119,7 @@ class _WelcomeScreenState extends State<CreateCleaningActivity> {
                         height: 60,
                         width: 60,
                         child: MkImageAssets.clean_office_icon),
-                    NormalText(text: 'Office', fontSize: 14, textColor: Colors.black45,),
+                    NormalText(text: 'Office', fontSize: 11, textColor: Colors.black45,),
                   ]),
 
                     XMargin(7),
@@ -129,7 +129,7 @@ class _WelcomeScreenState extends State<CreateCleaningActivity> {
                         height: 60,
                         width: 60,
                         child: MkImageAssets.clean_room_icon),
-                    NormalText(text: 'Rooms', fontSize: 14, textColor: Colors.black45),
+                    NormalText(text: 'Rooms', fontSize: 11, textColor: Colors.black45),
                   ]),
 
                     XMargin(7),
@@ -139,7 +139,7 @@ class _WelcomeScreenState extends State<CreateCleaningActivity> {
                         height: 60,
                         width: 60,
                         child: MkImageAssets.clean_rest_room_icon),
-                    NormalText(text: 'Toilet', fontSize: 14, textColor: Colors.black45),
+                    NormalText(text: 'Toilet', fontSize: 11, textColor: Colors.black45),
                   ]),
 
                     XMargin(7),
@@ -149,7 +149,7 @@ class _WelcomeScreenState extends State<CreateCleaningActivity> {
                         height: 60,
                         width: 60,
                         child: MkImageAssets.clean_compound_icon),
-                    NormalText(text: 'Compound', fontSize: 14, textColor: Colors.black45),
+                    NormalText(text: 'Compound', fontSize: 11, textColor: Colors.black45),
                   ]),
                 ],),
 
@@ -166,7 +166,7 @@ class _WelcomeScreenState extends State<CreateCleaningActivity> {
                           child: NormalText(text: 'Self-service', fontSize: 14, textColor: Colors.black45),
                         )),
 
-                    XMargin(30),
+                    XMargin(40),
 
                     Container(
                       decoration: solidCont(context),
@@ -177,12 +177,12 @@ class _WelcomeScreenState extends State<CreateCleaningActivity> {
 
                 ],),
 
-                YMargin(20.0),
+                YMargin(30.0),
 
                 Container(
                   decoration: outlinedCont,
                   child: Padding(
-                    padding: const EdgeInsets.all(18.0),
+                    padding: const EdgeInsets.all(12.0),
                     child: Row(children: [
                       Container(
                         height: 50,
@@ -201,12 +201,15 @@ class _WelcomeScreenState extends State<CreateCleaningActivity> {
                   children: [
                     XButton(
                         onClick: () {
-                          navigateReplace(context, OnBoardingScreen());
+                          navigateReplace(context, MainScreen());
                         },
                         text: 'Create Task'
                     ),
                   ],
-                )
+                ),
+
+                YMargin(20.0),
+
               ],
             ),
           ),
