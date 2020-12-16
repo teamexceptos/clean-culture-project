@@ -26,7 +26,7 @@ class _ServiceAgentDetailsScreenState extends State<ServiceAgentDetailsScreen> {
         elevation: 0,
         backgroundColor: Colors.white,
         leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios_rounded, color: Colors.black, size: 35,),
+            icon: Icon(Icons.arrow_back_ios_rounded, color: Colors.black, size: 30,),
             onPressed: () {
               popView(context);
             }
@@ -76,8 +76,8 @@ class _ServiceAgentDetailsScreenState extends State<ServiceAgentDetailsScreen> {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             SizedBox(
-                              width: SizeConfig.screenWidthDp - 70,
-                              child: TitleText(text: 'Cleaning Service', maxLines: 2, textColor: Colors.white,)
+                              width: SizeConfig.screenWidthDp - 60,
+                              child: TitleText(text: 'Cleaning Service', maxLines: 2, textColor: Colors.white, fontSize: 19,)
                             ),
                             YMargin(50),
                             Row(
@@ -86,19 +86,19 @@ class _ServiceAgentDetailsScreenState extends State<ServiceAgentDetailsScreen> {
                                 Column(
                                   children: [
                                     NormalText(text: 'PER BILL', textColor: Colors.white, fontSize: 12,),
-                                    TitleText(text: 'N3,500', textColor: Colors.white, fontSize: 25,)
+                                    TitleText(text: 'N3,500', textColor: Colors.white, fontSize: 21,)
                                   ],
                                 ),
                                 Column(
                                   children: [
                                     NormalText(text: 'RATING', textColor: Colors.white, fontSize: 12,),
-                                    TitleText(text: '4.5/5', textColor: Colors.white, fontSize: 25,)
+                                    TitleText(text: '4.5/5', textColor: Colors.white, fontSize: 21,)
                                   ],
                                 ),
                                 Column(
                                   children: [
                                     NormalText(text: 'TIME', textColor: Colors.white, fontSize: 12,),
-                                    TitleText(text: '2h', textColor: Colors.white, fontSize: 25,)
+                                    TitleText(text: '2h', textColor: Colors.white, fontSize: 21,)
                                   ],
                                 ),
                               ],
@@ -169,15 +169,10 @@ class _ServiceAgentDetailsScreenState extends State<ServiceAgentDetailsScreen> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   XButton(
-                    width: SizeConfig().sw(150),
-                    height: SizeConfig().sh(30),
-                    radius: 36,
-                    buttonColor: Colors.grey,
-                    onClick: (){
-
-                    },
-                    text: 'Request Service'
-                  )
+                      onClick: () {
+                      },
+                      text: 'Request Service'
+                  ),
                 ],
               ),
             ],
